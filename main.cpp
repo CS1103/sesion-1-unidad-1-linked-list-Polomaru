@@ -6,8 +6,8 @@
 using namespace std;
 
 int main() {
-
-    utec::linked_list_t ll;
+    /*
+    utec::linked_list_t<int> ll;
 
     // Probar el metodo push_front;
     for(int i = 0; i < 10; ++i) {
@@ -38,7 +38,7 @@ int main() {
     // Verifico el tamano
     assert(ll.size() == 0);
 
-
+    */
 
     std::cout << "Ejecucion exitosa!!" << std::endl;
     return 0;

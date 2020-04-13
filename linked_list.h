@@ -1,26 +1,27 @@
-//
-// Created by utec on 4/11/20.
-//
-
-#ifndef POO2_2020_1_LINKED_LIST_LINKED_LIST_H
-#define POO2_2020_1_LINKED_LIST_LINKED_LIST_H
 
 #include <cctype>
+#include <iostream>
+#include <cassert>
+#include <string>
+#include <utility>
+
 
 using namespace std;
 
 namespace utec
 {
+    template <typename T>
     struct node_t {
-        int value_ = 0;
+        T value_ = 0;
         node_t* next_ = nullptr;
     };
 
     inline namespace first {
+        template <typename T>
         class linked_list_t {
         private:
-            node_t* head_ = nullptr;
-            node_t* tail_ = nullptr;
+            utec::node_t<T> * head_ = nullptr;
+            utec::node_t<T> * tail_ = nullptr;
             size_t size_ = 0;
         public:
             // constructors
@@ -34,9 +35,9 @@ namespace utec
             ~linked_list_t();
 
             // add operations
-            void push_front(int value);
-            void push_back(int value);
-            void insert(size_t index, int value);
+            void push_front(T value);
+            void push_back(T value);
+            void insert(size_t index, T value);
 
             // remove operations
             void pop_front();
@@ -44,8 +45,8 @@ namespace utec
             void erase(size_t index);
 
             // traversal operations
-            int& item(size_t index);
-            const int& item(size_t index) const;
+            T& item(size_t index);
+            const T& item(size_t index) const;
 
             // get size of list
             size_t size() const;
@@ -53,4 +54,4 @@ namespace utec
     }
 }
 
-#endif //POO2_2020_1_LINKED_LIST_LINKED_LIST_H
+
